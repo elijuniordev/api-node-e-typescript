@@ -10,7 +10,7 @@ interface ICidade {
 export const createValidation = validation((getSchema) => ({
   body: getSchema<ICidade>(
     yup.object().shape({
-      nome: yup.string().required().min(3).max(150),
+      nome: yup.string().required().min(3),
     })
   ),
 }));
