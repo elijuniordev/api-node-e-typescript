@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "ts-node-dev ./src/index.ts",
+    "start": "nodemon ./build/index.js",
     "test": "jest",
     "build": "tsc"
   },
@@ -25,7 +25,7 @@
     "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.11",
     "eslint": "^8.42.0",
-    "nodemon": "^2.0.22",
+    "nodemon": "^3.0.0",
     "prettier": "^2.8.8",
     "supertest": "^6.3.3",
     "typescript": "^5.1.3"
