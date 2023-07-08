@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import * as yup from 'yup';
-import { validation } from '../../shared/middlewares';
+import { validation } from '../../shared/middleware';
 import { StatusCodes } from 'http-status-codes';
 
 interface IQueryProps {
