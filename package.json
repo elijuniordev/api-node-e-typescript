@@ -10,7 +10,7 @@
     "node": ">=18.x"
   },
   "scripts": {
-    "start": "nodemon build/index.js",
+    "start": "nodemon src/index.ts",
     "test": "jest",
     "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
