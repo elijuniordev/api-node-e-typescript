@@ -1,7 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Server_1 = require("./server/Server");
-Server_1.server.listen(process.env.PORT || 9001, () => {
-    console.log(`App rodando na porta ${process.env.PORT || 9001} `);
-});
+const knex_1 = require("./server/database/knex");
+const startServer = () => {
+    Server_1.server.listen(process.env.PORT || 9001, () => {
+        console.log(`App rodando na porta ${process.env.PORT || 9001} `);
+    });
+};
+if (process.env.IS_LOCALHOST !== 'true') {
+    knex_1.Knex.migrate
+        .latest()
+        .then(() => {
+        startServer();
+    })
+        .catch(console.log);
+}
+else {
+    startServer();
+}
 //# sourceMappingURL=index.js.map
