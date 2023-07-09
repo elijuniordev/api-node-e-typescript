@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "EliJunior.DEV",
+  "type": "commonjs",
   "license": "MIT",
   "private": false,
   "engines": {
-    "node": ">=14.x"
+    "node": ">=18.x"
   },
   "scripts": {
-    "start": "nodemon ./src/index.ts",
+    "start": "node ./build/index.js",
     "test": "jest",
     "build": "tsc"
   },
