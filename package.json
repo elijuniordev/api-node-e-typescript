@@ -10,10 +10,17 @@
     "node": ">=18.x"
   },
   "scripts": {
-    "start": "nodemon ./src/index.ts",
+    "start": "nodemon src/index.ts",
     "test": "jest",
-    "build": "tsc"
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add build"
   },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ],
   "dependencies": {
     "@types/jest": "^29.5.2",
     "dotenv": "^16.3.1",
@@ -31,7 +38,9 @@
     "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.11",
     "eslint": "^8.42.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
     "supertest": "^6.3.3",
     "typescript": "^5.1.3"
   }

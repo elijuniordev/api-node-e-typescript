@@ -4,3 +4,4 @@ const Server_1 = require("./server/Server");
 Server_1.server.listen(process.env.PORT || 9001, () => {
     console.log(`App rodando na porta ${process.env.PORT || 9001} `);
 });
+//# sourceMappingURL=index.js.map
