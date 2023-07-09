@@ -24,10 +24,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CidadesController = void 0;
+const deleteById = __importStar(require("./DeleteById"));
+const updateById = __importStar(require("./UpdateById"));
+const getById = __importStar(require("./GetById"));
 const create = __importStar(require("./Create"));
 const getAll = __importStar(require("./GetAll"));
-const getById = __importStar(require("./GetById"));
-const updateById = __importStar(require("./UpdateById"));
-const deleteById = __importStar(require("./DeleteById"));
-exports.CidadesController = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, create), getAll), getById), updateById), deleteById);
+exports.CidadesController = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, deleteById), updateById), getById), create), getAll);
 //# sourceMappingURL=index.js.map
