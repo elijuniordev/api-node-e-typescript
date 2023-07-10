@@ -10,12 +10,12 @@ export async function up(knex: Knex): Promise<void> {
       table.comment('Tabela usada para armazenar cidades do sistema.');
     })
     .then(() => {
-      console.log(`# Created table ${ETableNames.cidade} created!`);
+      console.log(`# Created table ${ETableNames.cidade}!`);
     });
 }
 
 export async function down(knex: Knex): Promise<void> {
   return knex.schema.dropTable(ETableNames.cidade).then(() => {
-    console.log(`# Dropped table ${ETableNames.cidade} created!`);
+    console.log(`# Dropped table ${ETableNames.cidade}!`);
   });
 }
