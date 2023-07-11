@@ -4,6 +4,7 @@ yarn-error.log
 /build
 /coverage
 
+*.env
 .env
 .vercel
 *.sqlite
