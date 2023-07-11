@@ -18,4 +18,7 @@ router.post('/pessoas', controllers_1.PessoasController.createValidation, contro
 router.get('/pessoas/:id', controllers_1.PessoasController.getByIdValidation, controllers_1.PessoasController.getById);
 router.put('/pessoas/:id', controllers_1.PessoasController.updateByIdValidation, controllers_1.PessoasController.updateById);
 router.delete('/pessoas/:id', controllers_1.PessoasController.deleteByIdValidation, controllers_1.PessoasController.deleteById);
+router.post('/sign-up', controllers_1.UsuariosController.signUpValidation, controllers_1.UsuariosController.signUp);
+router.post('/cadastrar', controllers_1.UsuariosController.signUpValidation, controllers_1.UsuariosController.signUp);
+router.post('/entrar', controllers_1.UsuariosController.signInValidation, controllers_1.UsuariosController.signIn);
 //# sourceMappingURL=index.js.map
