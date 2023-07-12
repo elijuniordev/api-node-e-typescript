@@ -33,10 +33,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.create = exports.createValidation = void 0;
-const yup = __importStar(require("yup"));
-const middleware_1 = require("../../shared/middleware");
 const http_status_codes_1 = require("http-status-codes");
+const yup = __importStar(require("yup"));
 const cidades_1 = require("../../database/providers/cidades");
+const middleware_1 = require("../../shared/middleware");
 exports.createValidation = (0, middleware_1.validation)((getSchema) => ({
     body: getSchema(yup.object().shape({
         nome: yup.string().required().min(3).max(150),
